@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poshnun Oupjan 6314110007</title>
+    <script type="text/javascript">
+        var name, // string entered by the user
+            now = new Date(), // current date and time
+            hour = now.getHours(); // current hour (0-23)
+
+        // read the name from the prompt box as a string
+        name = window.prompt("Please enter your name", "GalAnt");
+
+        // determine whether it is morning
+        if (hour < 12)
+            document.write("<h1>Good Morning, ");
+        // determine whether the time is PM
+        if (hour >= 12) {
+            // convert to a 12 hour clock
+            hour = hour - 12;
+
+            // determine whether it is before 6 PM
+            if (hour < 6)
+                document.write("<h1>Good Afternoon, ");
+
+            // determine whether it is after 6 PM
+            if (hour >= 6)
+                document.write("<h1>Good Evening, ");
+        }
+
+        document.writeln(name +
+            ", welcome to JavaScript programming!</h1>");
+    </script>
+</head>
+
+<body>
+    <p>Click Refresh (or Reload) to run this script again.</p><br><a href="..\Lab5\index.html">Back</a>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poshnun Oupjan 6314110007</title>
+    <script>
+        function loadXMLDoc() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    myFunction(xmlhttp);
+                }
+            };
+            xmlhttp.open("GET", "student.xml", true);
+            xmlhttp.send();
+        }
+        function myFunction(xml) {
+            var i;
+            var xmlDoc = xml.responseXML;
+            var table = "<tr><th>Firstname</th><th>Lastname</th><th>ID</th><th>Faculty</th><th>Dept</th><th>Province</th><th>Email</th><th>Phone</th></tr>";
+            var x = xmlDoc.getElementsByTagName("no");
+            for (i = 0; i < x.length; i++) {
+                table += "<tr><td>" +
+                    x[i].getElementsByTagName("fname")[0].childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("lname")[0].childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("id")[0].childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("faculty")[0].childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("dept")[0].childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("province")[0].childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("email")[0].childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("phone")[0].childNodes[0].nodeValue + "</td></tr>";
+            }
+            document.getElementById("demo").innerHTML = table;
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Students</h2>
+    <button type="button" onclick="loadXMLDoc()">
+        Get Student Collection</button>
+    <table id="demo" border="1"></table><br>
+    <a href="student.xml">Student XML</a><br>
+    <td><a href="..\Lab11\index.html">Back</a></td>
+</body>
+
+</html>

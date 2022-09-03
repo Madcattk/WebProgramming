@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poshnun Oupjan 6314110007</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #FFFFF0;
+        }
+        /* Float four columns side by side */
+        
+        .column {
+            float: left;
+            width: 25%;
+            padding: 0 10px;
+        }
+        /* Remove extra left and right margins, due to padding */
+        
+        .row {
+            margin: 0 -5px;
+        }
+        /* Clear floats after the columns */
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* Responsive columns */
+        
+        @media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+        
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+        }
+        
+        .price {
+            color: grey;
+            font-size: 22px;
+        }
+        
+        .card button {
+            border: none;
+            outline: 0;
+            padding: 12px;
+            color: white;
+            background-color: #694E4E;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+        
+        .card button:hover {
+            background-color: #F3C5C5;
+        }
+        
+        .card .submit {
+            border: none;
+            outline: 0;
+            padding: 12px;
+            color: white;
+            background-color: #694E4E;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+        
+        .card .submit:active {
+            background-color: #F3C5C5;
+        }
+        
+        body {
+            margin: 0;
+        }
+        
+        .navbar {
+            overflow: hidden;
+            background-color: #694E4E;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        
+        .main {
+            padding: 16px;
+            margin-top: 30px;
+            height: 1500px;
+            /* Used in this example to enable scrolling */
+        }
+        
+        .button {
+            background-color: #F3C5C5;
+            border: none;
+            color: white;
+            padding: 10px 30px;
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 0.3%;
+            opacity: 0.6;
+            transition: 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .button:hover {
+            opacity: 1
+        }
+    </style>
+</head>
+
+<body>
+    </style>
+    </head>
+
+    <body>
+        <div class="navbar">
+            <h5 style="text-align: center; color: white;">All Our Products</h5>
+        </div><br><br><br>
+        <form action="reserved.php" method="post">
+            <div class="row">
+                <div class="column">
+                    <div class="card">
+                        <img src="pic/p1.jpg" alt="Denim Jeans" style="width:100%">
+                        <h1>Prada Candy Florale Edt 80 ml</h1>
+                        <p class="price">$2599.99</p>
+                        <p>The delicately sweet smell of Candy meets a new, refined bouquet. Dynamic and sensual, Prada Candy Florale contains a mix of floral notes. </p>
+                        <input type="hidden" id="price" name="price" value="2599.99">
+                        <p><button type="submit" class="submit" name="info" value="Prada Candy Florale Edt 80 ml">Reserve and Pick up</button></p>
+                    </div>
+                </div>
+        </form>
+        <form action="reserved.php" method="post">
+            <div class="column">
+                <div class="card">
+                    <img src="pic/p2.jpg" alt="Denim Jeans" style="width:100%">
+                    <h1>Rouge à Lèvres Voile Lipstick</h1>
+                    <p class="price">$1999.99</p>
+                    <p>A collection of moisture-rich lipsticks with a luminous shine, Rouge à Lèvres Voile delivers sheer color with an ultra-light and smooth feel.</p>
+                    <input type="hidden" id="price" name="price" value="1999.99">
+                    <p><button type="submit" class="submit" name="info" value="Rouge à Lèvres Voile Lipstick">Reserve and Pick up</button></p>
+                </div>
+            </div>
+        </form>
+
+        <form action="reserved.php" method="post">
+            <div class="column">
+                <div class="card">
+                    <img src="pic/p3.jpg" alt="Denim Jeans" style="width:100%">
+                    <h1>CHAMBORD's Bottle</h1>
+                    <p class="price">$195.99</p>
+                    <p>Chambord is a super premium black raspberry liqueur made with the finest ingredients.</p>
+                    <input type="hidden" id="price" name="price" value="195.99">
+                    <p><button type="submit" class="submit" name="info" value="CHAMBORD Bottle">Reserve and Pick up</button></p>
+                </div>
+            </div>
+        </form>
+        <form action="reserved.php" method="post">
+            <div class="column">
+                <div class="card">
+                    <img src="pic/p4.jpg" alt="Denim Jeans" style="width:100%">
+                    <h1>DIOR Liquid Lipstick</h1>
+                    <p class="price">$959.99</p>
+                    <p>With a high dose of pigments, Rouge Dior Forever Liquid delivers pure, bold color with a spectacular matte radiance.</p>
+                    <input type="hidden" id="price" name="price" value="959.99">
+                    <p><button type="submit" class="submit" name="info" value="DIOR Liquid Lipstick">Reserve and Pick up</button></p>
+                </div>
+            </div>
+            </div>
+
+        </form>
+        <div style="text-align: right;"><button class="button" onclick="history.back()">Back</button></div>
+
+
+
+
+    </body>
+
+</html>

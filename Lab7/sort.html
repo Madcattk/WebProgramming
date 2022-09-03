@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poshnun Oupjan 6314110007</title>
+    <script type="text/javascript">
+        function start() {
+            var a = [10, 1, 9, 2, 8, 3, 7, 4, 6, 5];
+
+            document.writeln("<h1>Sorting an Array</h1>");
+            outputArray("Data items in original order: ", a);
+            a.sort(compareIntegers); // sort the array 
+            outputArray("Data items in ascending order: ", a);
+        }
+        // outputs "header" followed by the contents of "theArray" 
+        function outputArray(header, theArray) {
+            document.writeln("<p>" + header +
+                theArray.join(" ") + "</p>");
+        }
+
+        // comparison function for use with sort 
+        function compareIntegers(value1, value2) {
+            return parseInt(value1) - parseInt(value2);
+        }
+    </script>
+
+</head>
+
+<body onload="start()"> <br><a href="..\Lab7\index.html">Back</a></body>
+
+</html>

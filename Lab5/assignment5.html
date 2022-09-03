@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poshnun Oupjan 6314110007</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        document.writeln("<style type=\"text/css\"> span {font-size: .6em; height: 1em} .super {position: relative; top: -1ex} </style>");
+        var pow = 0;
+
+        while (pow < 1 || pow > 40) {
+            pow = window.prompt("Enter Integer number from 1 to 40", "1");
+
+            if (pow < 1 || pow > 40)
+                window.alert(pow + ": Number out of range, try again");
+        }
+        document.writeln("<div class=\"container\"><h2>Power of 2 from 1 to " + pow + "</h2>")
+        var i = 1;
+        document.writeln("<table class=\"table table-bordered\"><tbody>");
+        while (i <= pow) {
+            document.writeln("<tr><td>2<span class = \" super\">" +
+                i + "</span></td><td>" + Math.pow(2, i) + "</td></tr>");
+            i++;
+        }
+        document.writeln("</tbody></table></div>");
+    </script>
+</head>
+
+<body>
+    <br><a href="..\Lab5\index.html">Back</a>
+
+</html>

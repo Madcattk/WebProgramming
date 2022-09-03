@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poshnun Oupjan 6314110007</title>
+    <link rel="stylesheet" href="mystyle.css" type="text/css">
+    <style>
+        .container {
+            position: relative;
+        }
+        
+        .container .btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            background-color: black;
+            color: white;
+            font-size: 16px;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .container .btn:hover {
+            background-color: #F3C5C5;
+        }
+        
+        .avatar {
+            vertical-align: middle;
+            width: 75px;
+            height: 100px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="tablink" onclick="openPage('Home', this, '#694E4E')">Home</button>
+    <button class="tablink" onclick="openPage('Laboratory', this, '#694E4E')" id="defaultOpen">Laboratory</button>
+    <!-- <button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+    <button class="tablink" onclick="openPage('About', this, 'orange')">About</button>-->
+
+    <div id="Home" class="tabcontent">
+
+        <div class="container">
+            <img style="width: 100%; height: auto;" src="Project\pic\1.PNG" alt="Background">
+            <a href="Project/index.html"><button class="btn">Shop now!</button></a>
+
+        </div>
+    </div>
+
+    <div id="Laboratory" class="tabcontent">
+        <img src="Lab1\buttons\IMG_8446.JPG" alt="Avatar" class="avatar">
+        <h1>6314110007 HTML Files</h1>
+
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Poshnun's exercise names.." title="Type in a name">
+
+        <ul id="myUL">
+            <li><a href="Lab1/index.html">Lab1</a></li>
+            <li><a href="Lab2/index.html">Lab2</a></li>
+            <li><a href="Lab3/index.html">Lab3</a></li>
+            <li><a href="Lab4/index.html">Lab4</a></li>
+            <li><a href="Lab5/index.html">Lab5</a></li>
+            <li><a href="Lab6/index.html">Lab6</a></li>
+            <li><a href="Lab7/index.html">Lab7</a></li>
+            <li><a href="Lab8/index.html">Lab8</a></li>
+            <li><a href="Lab9/index.html">Lab9</a></li>
+            <li><a href="Lab10/index.html">Lab10</a></li>
+            <li><a href="Lab11/index.html">Lab11</a></li>
+            <li><a href="Lab12/index.html">Lab12</a></li>
+            <li><a href="Project/storedata.php">Sale Database</a></li>
+        </ul>
+
+        <script>
+            function myFunction() {
+                var input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById("myInput"); //สิ่งที่เรา search
+                filter = input.value.toUpperCase(); //เปลี่ยนให้เป็นตัวพิมพ์ใหญ่
+                ul = document.getElementById("myUL"); // ul ของ link lab
+                li = ul.getElementsByTagName("li"); // li ของ link lab 
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("a")[0]; // tag a ใน li
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) { //สิ่งที่ search เท่ากับหรือคล้าย tag a 
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none"; //สิ่งที่ป้อนไม่เกี่ยวข้องกับ tag a
+                    }
+                }
+            }
+        </script>
+    </div>
+
+    <script>
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent"); // id ของ class tabcontent
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink"); // ลิ้งไปหน้าไหน
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color; //สีบล็อคที่ใส่เข้ามา
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
+
+</body>
+
+</html>
+</body>
+
+</html>

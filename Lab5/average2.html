@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poshnun Oupjan 6314110007</title>
+    <script type="text/javascript">
+        var gradeCounter, // number of grades entered
+            gradeValue, // grade value
+            total, // sum of grades
+            average, // average of all grades
+            grade; // grade typed by user
+
+        // Initialization phase
+        total = 0; // clear total
+        gradeCounter = 0; // prepare to loop
+        // Processing phase
+        // prompt for input and read grade from user
+        grade = window.prompt(
+            "Enter Integer Grade, -1 to Quit:", "0");
+
+        // convert grade from a string to an integer
+        gradeValue = parseInt(grade);
+
+        while (gradeValue != -1) {
+            // add gradeValue to total
+            total = total + gradeValue;
+
+            // add 1 to gradeCounter
+            gradeCounter = gradeCounter + 1;
+
+            // prompt for input and read grade from user
+            grade = window.prompt(
+                "Enter Integer Grade, -1 to Quit:", "0");
+
+            // convert grade from a string to an integer
+            gradeValue = parseInt(grade);
+        }
+        // Termination phase
+        if (gradeCounter != 0) {
+            average = total / gradeCounter;
+
+            // display average of exam grades
+            document.writeln(
+                "<h1>Class average is " + average + "</h1>");
+        } else
+            document.writeln("<p>No grades were entered</p>");
+    </script>
+</head>
+
+<body>
+    <p>Click Refresh (or Reload) to run the script again</p><br><a href="..\Lab5\index.html">Back</a>
+</body>
+
+</html>

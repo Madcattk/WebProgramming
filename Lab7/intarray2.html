@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poshnun Oupjan 6314110007</title>
+    <script type="text/javascript">
+        function start() {
+            // Initializer list specifies number of elements and 
+            // value for each element. 
+            var colors = new Array("cyan", "magenta",
+                "yellow", "black");
+            var integers1 = [2, 4, 6, 8];
+            var integers2 = [2, , , 8];
+
+            outputArray("Array colors contains", colors);
+            outputArray("Array integers1 contains", integers1);
+            outputArray("Array integers2 contains", integers2);
+        }
+        // output "header" followed by a two-column table 
+        // containing subscripts and elements of "theArray" 
+        function outputArray(header, theArray) {
+            document.writeln("<h2>" + header + "</h2>");
+            document.writeln("<table border = \"1\"" +
+                "width = \"100%\">");
+            document.writeln("<thead><th width = \"100\" " +
+                "align = \"left\">Subscript</th>" +
+                "<th align = \"left\">Value</th></thead><tbody>");
+
+            for (var i = 0; i < theArray.length; i++)
+                document.writeln("<tr><td>" + i + "</td><td>" +
+                    theArray[i] + "</td></tr>");
+
+            document.writeln("</tbody></table>");
+        }
+    </script>
+</head>
+
+<body onload="start()"> <br><a href="..\Lab7\index.html">Back</a></body>
+
+</html>
